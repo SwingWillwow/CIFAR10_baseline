@@ -7,11 +7,13 @@ import cifar10
 
 FLAGS = tf.app.flags.FLAGS
 
+max_step = int(input())
+
 # define  global information
-tf.app.flags.DEFINE_string('train_dir', 'tmp/cifar10_train',
+tf.app.flags.DEFINE_string('train_dir', 'tmp/cifar10_train/1',
                            """Directory where to write event logs """
                            """and checkpoint.""")
-tf.app.flags.DEFINE_integer('max_steps', 1000000,
+tf.app.flags.DEFINE_integer('max_steps', max_step,
                             """Number of batches to run.""")
 tf.app.flags.DEFINE_boolean('log_device_placement', False,
                             """Whether to log device placement.""")
